@@ -1,0 +1,163 @@
+body { /*global*/
+    background-color: whitesmoke;
+}
+.split-layout {
+    display: flex;
+}
+.navbars { /*navbar*/
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    padding: 20px;
+}
+.navbars a {
+    color: white;
+}
+.login { /*login*/
+    box-shadow: 0 0 15px black;
+    max-width: 500px;
+    transform: translate(450px, 200px);
+    padding: 40px;
+    background-color: white;
+}
+.login input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+}
+.login button {
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+}
+.home-intro { /*home*/
+    box-shadow: 0 0 100px black;
+    display: inline-block;
+    background-color: beige;
+    margin: auto;
+    border: 10px solid blue;
+}
+.home-background {
+    background-image: url('photos/water-park.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 729px;
+    width: 100%;
+}
+.contact-us h1{ /*contact us*/
+    text-align: center;
+    color: darkblue;
+}
+.contact-us h2{
+    font-weight: bold;
+    font-family: arial;
+    color: darkblue;
+}
+.contact-us h3{
+    color: blue;
+}
+.part1, .part2, .part3 {
+    color: black;
+    background: radial-gradient(ellipse, white, white, whitesmoke, lightblue, blue);
+    box-shadow: 0 0 50px;
+    background-color: black;
+    padding: 5px;
+    margin: 10px;
+}
+.input-box, .radio-button, .check-box, .written-box {
+    border: 5px, solid lightgreen;
+}
+.contact-us-box {
+    box-shadow: 0 0 50px black;
+    max-width: 1000px;
+    padding: 40px;
+    background: radial-gradient(ellipse, white, white, whitesmoke, lightblue, blue);
+    margin: 20px auto;
+}
+.contact-submit {
+    background-color: green;
+    color: white;
+    width: 600px;
+    padding: 5px;
+}
+.submit-container {
+    display: flex;
+    justify-content: center;
+}
+.attractions-box { /*attractions*/
+    background-image: url('photos/water-ride.jpg');
+}
+.other-box {
+    background-image: url('photos/other-rides.jpg');
+}
+.attractions-box, .other-box {
+    background-size: cover;
+    background-position: center;
+    height: 669px;
+    width: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 20px lightseagreen;
+}
+.attractions-box:hover, .other-box:hover {
+    opacity: 0.8;
+}
+.attractions-button {
+    color: white;
+    background-color: black;
+    padding: 10px;
+}
+.water-rides-button-box {
+    bottom: 50%;
+    left: 25%;
+    position: absolute;
+}
+.other-attractions-button-box {
+    bottom: 50%;
+    left: 75%;
+    position: absolute;
+}
+.ride-description { /*water_rides*/
+    position: relative; /*about us uses this format*/
+    left: 5%; /*other_attractions uses this format*/
+    box-shadow: 0 0 20px black;
+    max-width: fit-content;
+    border: 10px solid blue;
+    margin-right: 10%;
+}
+.water-ride {
+    box-shadow: 0 0 20px black;
+    border: 10px solid green;
+    /*background-image: url('photos/water-ride-1.jpg');*/
+    background-size: cover;
+    background-position: center;
+    padding: 150px;
+}
+.calendar-table { /*calendar*/
+    width: 100%;
+}
+.calendar-table th, .calendar-table td {
+    border: 5px solid black;
+    padding: 10px;
+    text-align: center;
+}
+.ticket-passes { /*ticket-page*/
+    box-shadow: 0 0 15px black; /*about-us*/
+    padding: 30px; /*passes uses this page*/
+    background-color: beige; /*wait times uses this as well*/
+    max-width: 50%; /*projections uses this as well*/
+    margin: auto; /*tickets uses this as well*/
+}
+.ticket-passes form {
+    display: flex;
+    flex-direction: column;
+}
+.ticket-passes input {
+    padding: 10px;
+    width: 300px;
+}
+.ticket-passes button {
+    padding: 10px;
+    background-color: green;
+    color: white;
+}

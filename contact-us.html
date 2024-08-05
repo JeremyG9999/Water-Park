@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Us</title>
+    <link href="stylesheets.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body style="background: radial-gradient(ellipse, white, whitesmoke, lightblue, blue);">
+    <section>
+        <div class="navbars">
+                <a href="home.html">Home</a>
+                <a href="Attractions.html">Attractions</a>
+                <a href="Projections.html">Projections</a>
+                <a href="tickets_passes.html">Tickets/Passes</a>
+                <a href="contact-us.html">Contact Us</a>
+                <a href="about-us.html">About Us</a>
+                <a href="login.html">LogOut</a>
+        </div>
+    </section>
+    <section>
+        <div class="contact-us-box">
+            <div class="contact-us">
+                <h1>Contact Us Form</h1>
+            <section class="part1">
+                <h2>Part 1: Personal Information</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" class="input-box" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" class="input-box" required><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" class="input-box" required>
+            </section>  
+            <section class="part2">  
+                <h2>Part 2: Feedback</h2>
+                <h3><label>Did you have a positive experience with us today?</label></h3>
+                <input type="radio" id="yes" name="feedback" value="yes" onclick="alert('Success: We knew you would love it here!')">
+                <label for="yes" class="radio-button">Yes</label>
+                <input type="radio" id="no" name="feedback" value="no" onclick="alert('Error: Impossible to not have fun!')">
+                <label for="no" class="radio-button" onmouseover="alert('Warning: Do Not Even Think About It!')">No</label>
+               
+                <h3><label>What rides did you ride?</label></h3>
+                <input type="checkbox" id="waterride1" name="rides1" value="waterride1">
+                <label for="waterride1"class="check-box">waterride1</label><br>
+                <input type="checkbox" id="waterride2" name="rides2" value="waterride2">
+                <label for="waterride2" class="check-box">waterride2</label><br>
+                <input type="checkbox" id="waterride3" name="rides3" value="waterride3">
+                <label for="waterride3" class="check-box">waterride3</label><br>
+                <input type="checkbox" id="waterride4" name="rides4" value="waterride3">
+                <label for="waterride4" class="check-box">waterride4</label><br><br>
+            </section>    
+
+
+            <section class="part3">
+                <h2>Part 3: Written Response</h2>
+                <h3><label>Anything you would like to share with us!!!</label></h3>
+                <textarea id="message" class="written-box" name="message" rows="5" required></textarea><br>  
+                <div class="submit-container">
+                    <button type="submit" onclick="alert('Message sent successfully!')" class="contact-submit" >Submit</button>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>

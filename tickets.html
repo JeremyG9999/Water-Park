@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Park</title>
+    <link href="stylesheets.css" rel="stylesheet"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+<body style="background: radial-gradient(ellipse, white, whitesmoke, lightblue, blue);">
+    <section>
+        <div class="navbars">
+            <a href="home.html">Home</a>
+            <a href="attractions.html">Attractions</a>
+            <a href="projections.html">Projections</a>
+            <a href="tickets_passes.html">Tickets/Passes</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="about-us.html">About Us</a>
+            <a href="login.html">Log Out</a>
+        </div>
+    </section>
+    <section>
+        <div class="ticket-passes">
+            <h1>Purchase Tickets</h1>
+            <form>
+                <label for="ticket_number_input">Enter Number of Tickets (1-10): $40 per ticket</label>
+                <input type="number" id="ticket_number_input" min="1" max="10" step="1" required><br>
+                <label for="days_input">How Many Days (1-7):</label>
+                <input type="number" id="days_input" min="1" max="7" step="1" required><br>
+                <label for="total" onmouseover="update()">Total Cost Plus 5% Tax:</label>
+                <input type="text" id="total" readonly><br>
+                <button type="button" onmouseover="update()" onclick="update()">Update Total Cost</button><br>
+                <button type="submit" onmouseover="update()"
+                onclick="confirm('Are you sure you want to proceed with the purchase')">Purchase Tickets</button>
+            </form>
+            <a href="home.html">Return Home</a><br>
+            <a href="calendar.html">Check Calendar</a>
+        </div>
+    </section>
+    <script>
+        function update() {
+            const ticket_input = document.getElementById('ticket_number_input');
+            const days_input = document.getElementById('days_input');
+            const cost = document.getElementById('total');
+            const ticket = parseInt(ticket_input.value) || 0;
+            const days = parseInt(days_input.value) || 0;
+            const ticket_price = 40;
+            const tax = 0.05;
+            const total = ticket * days * ticket_price;
+            const totals = total + (total * tax);
+            cost.value = `$${totals.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

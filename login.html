@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="stylesheets.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css " rel="stylesheet"/>
+</head>
+<body>
+    <div class="login">
+        <h2>Login</h2>
+        <input type="text" id="user" placeholder="user" required>
+        <input type="password" id="pass" placeholder="pass" required>
+        <button onclick="login()">Login</button>
+    </div>
+    <script>
+        function login() {
+            var user = document.getElementById('user').value;
+            var pass = document.getElementById('pass').value;
+            if (user === 'user' && pass === 'pass') {
+                window.location.href = 'home.html';
+            } else {
+                alert('Incorrect username or password');
+            }
+        }
+    </script>
+</body>
+</html>
